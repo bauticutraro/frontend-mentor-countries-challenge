@@ -75,13 +75,6 @@ const CountryDetail = () => {
                     .join(', ')}
                 />
 
-                <li className="country-data-details-item">
-                  <span className="country-data-details-item-name">Languages:</span>
-                  <span className="country-data-details-item-text">
-                    {Object.values(country?.languages || {}).join(', ') || '-'}
-                  </span>
-                </li>
-
                 <CountryDetailItem
                   title="Languages"
                   value={Object.values(country?.languages || {}).join(', ')}
