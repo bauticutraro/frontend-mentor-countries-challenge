@@ -1,12 +1,12 @@
-import { ReactNode } from 'react';
-import './styles.scss';
+import { ReactNode } from 'react'
+import './styles.scss'
 
 type Props = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 
 const NotFoundText: React.FC<Props> = ({ children }) => {
-  return <p className='not-found-text'>{children}</p>;
-};
+  return <p className="not-found-text">{children}</p>
+}
 
-export default NotFoundText;
+export default NotFoundText

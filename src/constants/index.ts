@@ -1,15 +1,8 @@
 const THEMES = {
   LIGHT: 'light',
   DARK: 'dark'
-} as const;
+} as const
 
-const REGIONS = [
-  'Asia',
-  'Oceania',
-  'Europe',
-  'Americas',
-  'Antarctic',
-  'Africa'
-] as const;
+const REGIONS = ['Asia', 'Oceania', 'Europe', 'Americas', 'Antarctic', 'Africa'] as const
 
-export { THEMES, REGIONS };
+export { THEMES, REGIONS }

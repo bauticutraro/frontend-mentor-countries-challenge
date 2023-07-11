@@ -5,10 +5,7 @@
   --card-max-width: 1fr;
 
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(var(--card-min-width), var(--card-max-width))
-  );
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-min-width), var(--card-max-width)));
   grid-gap: var(--space-11);
 
   margin: var(--space-10) 0;

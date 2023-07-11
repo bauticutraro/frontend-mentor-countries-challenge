@@ -1,7 +1,7 @@
-import './styles.scss';
+import './styles.scss'
 
 const Loader = () => {
-  return <div className='lds-dual-ring' />;
-};
+  return <div className="lds-dual-ring" />
+}
 
-export default Loader;
+export default Loader

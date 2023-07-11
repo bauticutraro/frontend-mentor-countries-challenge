@@ -1,15 +1,15 @@
-import { useEffect, useRef } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { useRef } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { QueryClient, QueryClientProvider } from 'react-query'
 //styles
-import './styles/normalize.scss';
-import './styles/theme.scss';
-import './styles/global.scss';
+import './styles/normalize.scss'
+import './styles/theme.scss'
+import './styles/global.scss'
 // pages
-import Home from './pages/Home';
-import CountryDetail from './pages/CountryDetail';
-import PageLayout from './components/PageLayout';
-import { ThemeContextProvider } from './context/theme-context';
+import Home from './pages/Home'
+import CountryDetail from './pages/CountryDetail'
+import PageLayout from './components/PageLayout'
+import { ThemeContextProvider } from './context/theme-context'
 
 const App = () => {
   const queryClient = useRef(
@@ -20,7 +20,7 @@ const App = () => {
         }
       }
     })
-  );
+  )
 
   return (
     <QueryClientProvider client={queryClient.current} contextSharing>
@@ -28,14 +28,14 @@ const App = () => {
         <BrowserRouter>
           <PageLayout>
             <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/country/:cca2' element={<CountryDetail />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/country/:cca2" element={<CountryDetail />} />
             </Routes>
           </PageLayout>
         </BrowserRouter>
       </ThemeContextProvider>
     </QueryClientProvider>
-  );
-};
+  )
+}
 
-export default App;
+export default App
