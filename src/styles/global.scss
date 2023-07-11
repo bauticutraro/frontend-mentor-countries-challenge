@@ -1,0 +1,13 @@
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-weight: 300;
+  font-size: var(--fs-md);
+}
+
+*,
+*::before,
+*::after,
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}

@@ -1,0 +1,123 @@
+@import '../../styles/theme.scss';
+
+.button-container {
+  margin-bottom: var(--space-11);
+
+  @media only screen and (max-width: $bp-sm) {
+    margin-bottom: var(--space-8);
+  }
+}
+
+.container {
+  display: flex;
+  gap: var(--space-12);
+
+  @media only screen and (max-width: $bp-lg) {
+    gap: var(--space-10);
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    gap: var(--space-8);
+  }
+
+  @media only screen and (max-width: $bp-sm) {
+    flex-direction: column;
+  }
+}
+
+.flag-container {
+  width: 50%;
+  @media only screen and (max-width: $bp-md) {
+    width: 40%;
+  }
+  @media only screen and (max-width: $bp-sm) {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.country-data {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-title {
+    font-weight: 800;
+    font-size: var(--fs-4xl);
+    margin-bottom: var(--space-8);
+
+    @media only screen and (max-width: $bp-md) {
+      font-size: var(--fs-2xl);
+      margin-bottom: var(--space-8);
+    }
+
+    @media only screen and (max-width: $bp-sm) {
+      margin-bottom: var(--space-6);
+
+      font-size: var(--fs-xl);
+    }
+  }
+
+  &-details {
+    display: flex;
+
+    @media only screen and (max-width: $bp-sm) {
+      flex-direction: column;
+    }
+
+    &-list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      margin-bottom: var(--space-11);
+
+      @media only screen and (max-width: $bp-md) {
+        margin-bottom: var(--space-9);
+      }
+    }
+
+    &-border-countries {
+      display: flex;
+      font-size: var(--fs-md);
+
+      @media only screen and (max-width: $bp-md) {
+        font-size: var(--fs-sm);
+      }
+
+      &-name {
+        font-weight: 600;
+        margin-right: var(--space-2);
+      }
+
+      &-text {
+        font-weight: 300;
+      }
+    }
+
+    &-border-countries {
+      gap: var(--space-2);
+
+      @media only screen and (max-width: $bp-md) {
+        &:not(:has(span)) {
+          flex-direction: column;
+          gap: var(--space-4);
+        }
+      }
+
+      &-name,
+      &-empty {
+        white-space: nowrap;
+        margin-top: 5px;
+      }
+
+      &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+      }
+    }
+  }
+}

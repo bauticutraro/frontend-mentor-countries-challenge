@@ -1,0 +1,36 @@
+@import '../../styles/theme.scss';
+
+.countries-list {
+  --card-min-width: 270px;
+  --card-max-width: 1fr;
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--card-min-width), var(--card-max-width))
+  );
+  grid-gap: var(--space-11);
+
+  margin: var(--space-10) 0;
+
+  @media only screen and (max-width: $bp-lg) {
+    grid-gap: var(--space-8);
+  }
+
+  @media only screen and (max-width: $bp-md) {
+    --card-max-width: 340px;
+    justify-content: center;
+  }
+  @media only screen and (max-width: $bp-sm) {
+    --card-min-width: 250px;
+    --card-max-width: 1fr;
+  }
+  @media only screen and (max-width: $bp-xs) {
+    --card-min-width: auto;
+    --card-max-width: 400px;
+  }
+}
+
+.not-found-text-container {
+  margin-top: var(--space-10);
+}

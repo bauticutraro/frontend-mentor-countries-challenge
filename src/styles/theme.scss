@@ -1,0 +1,75 @@
+// breakpoints
+$bp-xxs: 350px;
+$bp-xs: 576px;
+$bp-sm: 768px;
+$bp-md: 992px;
+$bp-lg: 1200px;
+$bp-xl: 1400px;
+
+:root {
+  // max width
+  --screen-max-width: 1440px;
+
+  // spaces
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 56px;
+  --space-11: 64px;
+  --space-12: 128px;
+  --space-13: 256px;
+  --space-14: 512px;
+
+  //fontSizes
+  --fs-xxs: 10px;
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 18px;
+  --fs-xl: 20px;
+  --fs-2xl: 24px;
+  --fs-3xl: 32px;
+  --fs-4xl: 36px;
+  --fs-5xl: 40px;
+  --fs-6xl: 48px;
+
+  // color pallete
+  --dark-blue: hsl(209, 23%, 22%);
+  --dark-blue-2: hsl(207, 26%, 17%);
+  --dark-blue-3: hsl(200, 15%, 8%);
+  --dark-blue-4: hsl(195, 14%, 11%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --light-gray: hsl(0, 0%, 98%);
+  --light-gray-2: hsl(0, 0%, 95%);
+  --white: hsl(0, 0%, 100%);
+
+  // components theme
+  --bg-color: var(--light-gray);
+  --text-color: var(--dark-blue-3);
+  --input-bg: var(--white);
+  --elements-color: var(--white);
+  --elements-shadow: var(--light-gray-2);
+  --icon-color: var(--dark-gray);
+
+  --select-option-focus: rgba(0, 0, 0, 0.05);
+  --select-option-selected: rgba(0, 0, 0, 0.1);
+}
+
+.theme-dark {
+  --bg-color: var(--dark-blue-2);
+  --text-color: var(--white);
+  --input-bg: var(--dark-blue);
+  --elements-color: var(--dark-blue);
+  --elements-shadow: var(--dark-blue-4);
+  --icon-color: var(--white);
+
+  --select-option-focus: rgba(255, 255, 255, 0.1);
+  --select-option-selected: rgba(255, 255, 255, 0.2);
+}

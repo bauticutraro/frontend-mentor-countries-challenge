@@ -1,0 +1,51 @@
+.country {
+  &-link {
+    color: var(--text-color);
+  }
+
+  &-card {
+    height: 100%;
+    width: 100%;
+    background-color: var(--elements-color);
+    box-shadow: 0 8px 24px var(--elements-shadow);
+    border-radius: var(--space-1);
+    overflow: hidden;
+    cursor: pointer;
+
+    &-img {
+      width: 100%;
+      aspect-ratio: 5 / 3;
+      object-fit: cover;
+    }
+
+    &-subcontainer {
+      padding: var(--space-6) var(--space-6) var(--space-8);
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: var(--fs-lg);
+      margin-bottom: var(--space-6);
+    }
+
+    &-details {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+
+      &-item {
+        display: flex;
+        font-size: var(--fs-sm);
+
+        &-name {
+          font-weight: 600;
+          margin-right: var(--space-1);
+        }
+
+        &-text {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

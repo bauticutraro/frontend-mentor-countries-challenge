@@ -1,0 +1,19 @@
+@import '../../styles/theme.scss';
+
+.item {
+  display: flex;
+  font-size: var(--fs-md);
+
+  @media only screen and (max-width: $bp-md) {
+    font-size: var(--fs-sm);
+  }
+
+  &-name {
+    font-weight: 600;
+    margin-right: var(--space-2);
+  }
+
+  &-text {
+    font-weight: 300;
+  }
+}
