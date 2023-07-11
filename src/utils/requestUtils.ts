@@ -23,6 +23,8 @@ const attemptApiRequest = ({ endpoint, method = 'GET', body = null }: Request) =
     body
   })
 
-const handleFailure = (err: { message: string }) => ({ error: err.message })
+const handleFailure = (err: { message: string }) => {
+  throw new Error(err.message)
+}
 
 export default { verifyResponse, attempBody, attemptApiRequest, handleFailure }

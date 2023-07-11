@@ -10,7 +10,7 @@ const INITIAL_FILTERS_STATE = { name: '', region: '' }
 
 const Home = () => {
   const [countriesFilters, setCountriesFilters] = useState<ContriesFilters>(INITIAL_FILTERS_STATE)
-  const { data, isLoading } = useGetCountries(countriesFilters)
+  const { data, isLoading, error } = useGetCountries(countriesFilters)
 
   const handleOnFilterByName = (name: string) => {
     setCountriesFilters(prevState => ({ ...prevState, name }))
@@ -20,6 +20,7 @@ const Home = () => {
   }
 
   if (isLoading) return <Loader />
+  if (error) return <NotFoundText>Ha sucedido un error al cargar los paises.</NotFoundText>
 
   return (
     <div>
@@ -35,7 +36,7 @@ const Home = () => {
         </div>
       ) : (
         <div className="not-found-text-container">
-          <NotFoundText>No ha sido posible cargar el listado de paises.</NotFoundText>
+          <NotFoundText>No se han encontrado paises.</NotFoundText>
         </div>
       )}
     </div>
