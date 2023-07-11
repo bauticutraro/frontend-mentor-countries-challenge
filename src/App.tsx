@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
 //styles
 import './styles/normalize.scss'
@@ -30,6 +30,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/country/:cca2" element={<CountryDetail />} />
+              <Route path="*" element={<Navigate to="/" />} />
             </Routes>
           </PageLayout>
         </BrowserRouter>
