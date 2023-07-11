@@ -1,12 +1,12 @@
 import { useGetCountryByCca2, useGetCountriesByCca2 } from '../../hooks/useGetCountries'
 import { useParams, useNavigate } from 'react-router-dom'
-import './styles.scss'
 import Button from '../../components/base/Button'
 import { HiArrowLongLeft } from 'react-icons/hi2'
 import { IconType } from 'react-icons'
 import NotFoundText from '../../components/NotFoundText'
 import Loader from '../../components/base/Loader'
 import CountryDetailItem from '../../components/CountryDetailItem'
+import './styles.scss'
 
 const CountryDetail = () => {
   const { cca2 } = useParams()
@@ -39,8 +39,12 @@ const CountryDetail = () => {
 
       {country ? (
         <div className="container">
-          <div className="flag-container">
-            <img alt={`${country.name.common} flag`} src={country.flags.svg} className="country-card-img" />
+          <div className="country-data-flag-container">
+            <img
+              alt={`${country.name.common} flag`}
+              src={country.flags.svg}
+              className="country-data-flag-img"
+            />
           </div>
 
           <div className="country-data">
