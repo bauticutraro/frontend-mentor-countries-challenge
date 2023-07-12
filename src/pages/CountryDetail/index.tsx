@@ -53,7 +53,10 @@ const CountryDetail = () => {
               <ul className="country-data-details-list">
                 <CountryDetailItem
                   title="Native Name"
-                  value={country.name.nativeName?.[Object.keys(country.name.nativeName)[0]].common}
+                  value={
+                    country.name.nativeName?.[Object.keys(country.name.nativeName)[0]]?.common ||
+                    country.name.common
+                  }
                 />
 
                 <CountryDetailItem title="Population" value={country.population.toLocaleString('de-DE')} />
